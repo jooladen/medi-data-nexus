@@ -24,6 +24,9 @@ tmp_test/
 tmp_*.pdf
 *.tmp
 
+# personal medical data
+data/
+
 # OS
 .DS_Store
 Thumbs.db
@@ -37,3 +40,5 @@ Thumbs.db
 
 # playwright
 .playwright-mcp/
+
+.vercel
