@@ -132,9 +132,9 @@ medi-data-nexus/
 ├── lib/
 │   └── types.ts                   # TypeScript 타입 정의
 ├── api/
-│   ├── parse.py                   # PDF 파싱 메인 (pdfplumber 테이블 파싱)
-│   ├── parse_cli.py               # CLI 엔트리포인트 (Next.js subprocess 호출용)
-│   ├── export_excel.py            # 엑셀 생성 (openpyxl)
+│   ├── parse.py                   # PDF 파싱 메인 (Vercel Python Serverless handler)
+│   ├── parse_cli.py               # CLI 엔트리포인트 (로컬 테스트용 subprocess 실행)
+│   ├── export-excel.py            # 엑셀 생성 Serverless handler (openpyxl)
 │   └── export_excel_cli.py        # 엑셀 CLI 엔트리포인트
 ├── requirements.txt
 └── vercel.json
@@ -155,6 +155,7 @@ Response: JSON
   "summary": [
     {
       "diagnosis": "만성 복합치주염",
+      "diagnosisCode": "K052",
       "dateRange": { "start": "2025-09-18", "end": "2026-01-12" },
       "totalVisits": 3,
       "methods": ["Treatment"],
@@ -227,10 +228,10 @@ def parse_detail_info(pdf_path: str) -> list[dict]:
 
 ```python
 def classify_treatment(treatment_detail: str, code_name: str) -> str:
+    # 검사: "영상진단" in treatment_detail OR "검사료" in treatment_detail OR "검사" in code_name  (최우선)
     # 수술: "처치 및 수술" in treatment_detail AND ("수술" in code_name OR code_name.endswith("술"))
     # 처치: "처치 및 수술" in treatment_detail (수술 아닌 경우) OR "이학요법" in treatment_detail
-    # 검사: "영상진단" in treatment_detail OR "검사료" in treatment_detail OR "검사" in code_name
-    # 기타: 진찰료, 마취료, 조제료 등 → 분류에서 제외
+    # 기타: 진찰료, 마취료, 조제료 등 → None 반환 (분류에서 제외)
 ```
 
 ### 5.6 데이터 Join (날짜 기준)
@@ -294,7 +295,7 @@ def join_by_date(basic: list[dict], detail: list[dict]) -> tuple[list, list]:
 
 ## 9. 검증 방법
 
-1. 샘플 PDF 2개로 로컬 Python 파서 단독 테스트 (`python api/parse.py`)
+1. 샘플 PDF 2개로 로컬 Python 파서 단독 테스트 (`python api/parse_cli.py <기본진료정보.pdf> <세부진료정보.pdf>`)
 2. Next.js dev 서버 실행 → 브라우저에서 업로드 테스트
 3. 결과 테이블을 수작업 계산 결과와 대조
 4. 엑셀 다운로드 → Excel에서 열어서 한글/서식 확인
