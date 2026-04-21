@@ -21,6 +21,7 @@ api/__pycache__/
 
 # temp
 tmp_test/
+tmp_*.pdf
 *.tmp
 
 # OS
