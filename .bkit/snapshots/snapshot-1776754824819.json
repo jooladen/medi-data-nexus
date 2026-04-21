@@ -1,0 +1,189 @@
+{
+  "timestamp": "2026-04-21T07:00:24.816Z",
+  "reason": "compaction",
+  "status": {
+    "version": "3.0",
+    "lastUpdated": "2026-04-20T21:56:25.451Z",
+    "activeFeatures": [
+      "medi-data-nexus",
+      "api",
+      "result",
+      "parse",
+      "export-excel"
+    ],
+    "primaryFeature": "medi-data-nexus",
+    "features": {
+      "medi-data-nexus": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-20T13:03:15.923Z",
+          "lastUpdated": "2026-04-20T13:06:56.480Z"
+        },
+        "lastFile": "C:\\Users\\jooladen\\Desktop\\claude-code2\\medi-data-nexus\\app\\page.tsx"
+      },
+      "api": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-20T13:04:43.212Z",
+          "lastUpdated": "2026-04-20T21:56:01.178Z"
+        },
+        "lastFile": "C:\\Users\\jooladen\\Desktop\\claude-code2\\medi-data-nexus\\api\\export_excel_cli.py"
+      },
+      "result": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-20T13:07:26.196Z",
+          "lastUpdated": "2026-04-20T13:07:26.196Z"
+        },
+        "lastFile": "C:\\Users\\jooladen\\Desktop\\claude-code2\\medi-data-nexus\\app\\result\\page.tsx"
+      },
+      "parse": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-20T21:55:42.669Z",
+          "lastUpdated": "2026-04-20T21:55:42.669Z"
+        },
+        "lastFile": "C:\\Users\\jooladen\\Desktop\\claude-code2\\medi-data-nexus\\app\\api\\parse\\route.ts"
+      },
+      "export-excel": {
+        "phase": "do",
+        "phaseNumber": 3,
+        "matchRate": null,
+        "iterationCount": 0,
+        "requirements": [],
+        "documents": {},
+        "timestamps": {
+          "started": "2026-04-20T21:55:53.291Z",
+          "lastUpdated": "2026-04-20T21:56:25.444Z"
+        },
+        "lastFile": "C:\\Users\\jooladen\\Desktop\\claude-code2\\medi-data-nexus\\app\\api\\export-excel\\route.ts"
+      }
+    },
+    "pipeline": {
+      "currentPhase": 1,
+      "level": "Dynamic",
+      "phaseHistory": []
+    },
+    "session": {
+      "startedAt": "2026-04-20T10:48:10.550Z",
+      "onboardingCompleted": false,
+      "lastActivity": "2026-04-20T21:56:25.451Z"
+    },
+    "history": [
+      {
+        "timestamp": "2026-04-20T13:03:15.941Z",
+        "feature": "medi-data-nexus",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:04:43.219Z",
+        "feature": "api",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:05:18.354Z",
+        "feature": "api",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:05:55.188Z",
+        "feature": "medi-data-nexus",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:06:10.200Z",
+        "feature": "medi-data-nexus",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:06:21.105Z",
+        "feature": "medi-data-nexus",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:06:56.486Z",
+        "feature": "medi-data-nexus",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T13:07:26.203Z",
+        "feature": "result",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T21:55:24.156Z",
+        "feature": "api",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T21:55:42.674Z",
+        "feature": "parse",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T21:55:53.297Z",
+        "feature": "export-excel",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T21:56:01.183Z",
+        "feature": "api",
+        "phase": "do",
+        "action": "updated"
+      },
+      {
+        "timestamp": "2026-04-20T21:56:25.450Z",
+        "feature": "export-excel",
+        "phase": "do",
+        "action": "updated"
+      }
+    ],
+    "stateMachine": {
+      "defaultWorkflow": "default",
+      "activeWorkflows": {},
+      "totalTransitions": 0
+    },
+    "automation": {
+      "globalLevel": 2,
+      "trustScore": 40,
+      "pendingApprovals": 0,
+      "lastGateResult": null
+    },
+    "team": {
+      "enabled": true,
+      "stateFile": ".bkit/runtime/agent-state.json",
+      "eventsFile": ".bkit/runtime/agent-events.jsonl"
+    }
+  }
+}
