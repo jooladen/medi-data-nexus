@@ -295,7 +295,7 @@ def join_by_date(basic: list[dict], detail: list[dict]) -> tuple[list, list]:
 
 ## 9. 검증 방법
 
-1. 샘플 PDF 2개로 로컬 Python 파서 단독 테스트 (`python api/parse_cli.py <기본진료정보.pdf> <세부진료정보.pdf>`)
+1. 샘플 PDF 2개로 로컬 Python 파서 단독 테스트 (`python api/parse_cli.py "data/개인진료정보내역(기본진료정보)_20260413.pdf" "data/개인진료정보내역(세부진료정보)_20260413.pdf"`)
 2. Next.js dev 서버 실행 → 브라우저에서 업로드 테스트
 3. 결과 테이블을 수작업 계산 결과와 대조
 4. 엑셀 다운로드 → Excel에서 열어서 한글/서식 확인
